@@ -130,58 +130,9 @@ public class BKTree {
 				pipeTokenList.add(tokenArray);
 			}
 		}
-		//tree.generateMenuItemsGivenInReview(pipeTokenList, new String[pipeTokenList.size()], 0);
-		String str = "I am a boy     lll?????????? Youuurrrrrrrr............";
-		str = str.replaceAll("\\s+", " ").trim();//multiple whitespaces
-		str = str.replaceAll("(\\W)\\1{2,}", "$1");
-		System.out.println(str);
-		//String str = "fish,kata";
-		/*String []splitter = str.split("\\,");
-		System.out.println(splitter.length);
-
-		for(String arr : splitter){
-			System.out.println(arr);
-		}*/
 	}
 
-	void generateMenuItemsGivenInReview(ArrayList<String []> input, String[] cartesianIteration,int index){
 
-		if(index == input.size()){
-			for(int i = 0; i < index; i++) {
-				System.out.print(cartesianIteration[i] + " ");
-			}
-			System.out.println();			
-		}
-		else{
-			String []current = input.get(index);
-			for(int i = 0; i < 	current.length; i++){
-				cartesianIteration[index] = current[i];
-				generateMenuItemsGivenInReview(input, cartesianIteration, index+1);
-			}
-		}
-
-	}
-
-	/*String generateMenuItemsGivenInReview(String []pipeToken, int index){
-		String str = "";
-		if(index >= pipeToken.length){
-			//System.out.println(sb);
-			//sb = new StringBuffer();
-			return "";
-		}
-		String token = pipeToken[index];
-		System.out.println(token);
-		String []commaToken = token.split("\\,");		
-		for(int i = 0; commaToken != null && i < commaToken.length; i++){
-			if(commaToken[i].length() > 0){
-				//sb.append(commaToken[i].trim()+" ");
-				str = str+ " "+generateMenuItemsGivenInReview(pipeToken, index+1);
-
-			}
-		}
-		System.out.println(str);
-		return str;
-	}*/
 
 
 }
